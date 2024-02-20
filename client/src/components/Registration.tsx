@@ -22,7 +22,7 @@ const Registration:React.FC = () => {
                     <i className="fab fa-facebook"></i>
                 </div>
                 <div className="not-member">
-                    already a member? <Link to="/">Login</Link>
+                    already a member? <Link to="/timesync">Login</Link>
                 </div>
             </div>
         

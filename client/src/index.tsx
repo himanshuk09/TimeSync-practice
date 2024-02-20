@@ -7,13 +7,15 @@ import App from './App';
 import Login from './components/Login';
 import Registration from './components/Registration';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import DashboardSlider from './components/DashboardSlider';
-import { Home } from './components/Home';
+import Events from './components/Events';
+import SideMenu from './components/SideMenu';
+import { Dashboard } from './components/Dashboard';
+import Profile from './components/Profile';
 
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <App />,
     children: [
       {
         path: '/',
@@ -25,8 +27,22 @@ const Router = createBrowserRouter([
       }
     ]
   }, {
-    path: "/dashboard",
-    element: <DashboardSlider />,
+    path: "/timesync/",
+    element: <SideMenu />,
+    children:[
+      {
+        path:'dashboard',
+        element:<Dashboard/>
+      },
+      {
+        path:"events",
+        element:<Events/>
+      },
+      {
+        path:"profile",
+        element:<Profile/>
+      }
+    ]
   }
 ])
 const root = ReactDOM.createRoot(

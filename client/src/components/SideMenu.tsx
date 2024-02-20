@@ -1,28 +1,29 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import Events from './Events';
+import { Dashboard } from './Dashboard';
 
-const DashboardSlider: React.FC = () => {
+const SideMenu: React.FC = () => {
   return (
     <div className="container">
       <nav>
         <ul>
           <li><a href="#" className="logo">
             <img src="/user-icon.jpg" alt="" />
-            <span className="nav-item">DashBoard</span>
+            <span className="nav-item">TimeSync</span>
           </a></li>
-          <li><a href="#">
+          <li><Link to="/timesync/dashboard">
             <i className="fas fa-home"></i>
-            <span className="nav-item">Home</span>
-          </a></li>
-          <li><a href="">
+            <span className="nav-item">Dashboard</span>
+          </Link></li>
+          <li><Link to="/timesync/profile">
             <i className="fas fa-user"></i>
             <span className="nav-item">Profile</span>
-          </a></li>
-          <li><a href="#">
+          </Link></li>
+          <li><Link to="/timesync/events">
             <i className="fas fa-wallet"></i>
             <span className="nav-item">Events</span>
-          </a></li>
+          </Link></li>
           <li><a href="#">
             <i className="fas fa-chart-bar"></i>
             <span className="nav-item">Room Reservation</span>
@@ -45,9 +46,9 @@ const DashboardSlider: React.FC = () => {
           </Link></li>
         </ul>
       </nav>
-      <Events/>
+     <Outlet/>
     </div>
   )
 }
 
-export default DashboardSlider;
+export default SideMenu;
