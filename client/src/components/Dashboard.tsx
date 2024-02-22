@@ -3,11 +3,6 @@ import { eventData } from './constantData/eventData';
 
 export const Dashboard: React.FC = () => {
   const [events, setEvents] = useState(eventData);
-  console.log(events);
-
-  // const list = (event) => {
-  //   return ;
-  // }
   return (
     <div className="main-body">
       <h2>Dashboard</h2>
@@ -22,10 +17,6 @@ export const Dashboard: React.FC = () => {
         <div className='notice-box'>
           <h3>Notice</h3>
           <div className='notice-content'>
-            <p>This is a horizontally scrolling</p>
-            <p>This is a horizontally scrolling</p>
-            <p>This is a horizontally scrolling</p>
-            <p>This is a horizontally scrolling</p>
             <p>This is a horizontally scrolling</p>
           </div>
         </div>
@@ -104,19 +95,19 @@ export const Dashboard: React.FC = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
+              {/* <tr>
                 <td>1</td>
                 <td>CNIC</td>
                 <td>PDF</td>
                 <td>20</td>
-              </tr>
-              <tr>
+              </tr> */}
+              {/* <tr>
                 <td>2</td>
                 <td>Passport</td>
                 <td>PDF</td>
                 <td>12</td>
-              </tr>
-              <tr>
+              </tr> */}
+              {/* <tr>
                 <td>3</td>
                 <td>Licence</td>
                 <td>PDF</td>
@@ -133,7 +124,7 @@ export const Dashboard: React.FC = () => {
                 <td>Licence</td>
                 <td>PDF</td>
                 <td>9</td>
-              </tr>
+              </tr> */}
               <tr>
                 <td>2</td>
                 <td>Passport</td>

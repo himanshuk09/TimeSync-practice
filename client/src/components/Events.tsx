@@ -1,4 +1,4 @@
-import { Button, MenuItem} from '@mui/material';
+import { Button, MenuItem } from '@mui/material';
 import FormControl from '@mui/material/FormControl/FormControl';
 import InputLabel from '@mui/material/InputLabel/InputLabel';
 import Select from '@mui/material/Select/Select';
@@ -8,12 +8,13 @@ import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { eventData } from './constantData/eventData';
 
 const Events = () => {
     const [age, setAge] = useState('');
     const [value, setValue] = React.useState<Dayjs | null>(dayjs('2022-04-17'));
-
+    const [events, setEvents] = useState(eventData);
 
 
     return (
@@ -60,29 +61,22 @@ const Events = () => {
                         </LocalizationProvider>
                     </div>
                     <TextField id="outlined-basic" size='medium' className='text-field' label="Discription" rows={4} multiline={true} variant="outlined" />
-                   
-                    <Button variant="contained" className='add-btn' size="small">
+                    <Button variant="contained" className='add-btn button' size="small">
                         Add Event
                     </Button>
-                    
+
                 </div>
                 <div className=" right-block">
                     <div className="main-top">
                         <h3>Events</h3>
                     </div>
                     <div className='card-container'>
-                        <div className="card">
-                            <h5>Event Title</h5>
-                            <p>12/03/24</p>
-                        </div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-
-
+                        {
+                            events.map((event) => (<div className="card">
+                                <h5>{event.event_title}</h5>
+                                <p>{event.start_date}</p>
+                            </div>))
+                        }
                     </div>
                 </div>
 

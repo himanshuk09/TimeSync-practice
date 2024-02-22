@@ -11,6 +11,8 @@ import Events from './components/Events';
 import SideMenu from './components/SideMenu';
 import { Dashboard } from './components/Dashboard';
 import Profile from './components/Profile';
+import ProfileDeatilsView from './components/ProfileDeatilsView';
+import ProfileDeatilsEdit from './components/ProfileDeatilsEdit';
 
 const Router = createBrowserRouter([
   {
@@ -40,7 +42,15 @@ const Router = createBrowserRouter([
       },
       {
         path:"profile",
-        element:<Profile/>
+        element:<Profile/>,
+        children:[{
+          path:"",
+           element:<ProfileDeatilsView/>,
+        },{
+          path:"edit",
+           element:<ProfileDeatilsEdit/>,
+        }
+      ]
       }
     ]
   }

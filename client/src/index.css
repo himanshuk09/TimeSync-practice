@@ -196,11 +196,17 @@ nav:hover {
   padding: 10px;
 }
 
+.card h5{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100px;
+  white-space: nowrap;
+} 
 .add-btn {
-  position: relative;
-  top: 28%;
-  width: 18%;
-  left: 36%;
+  position: relative !important;
+  top: 28% !important;
+  width: 18% !important;
+  left: 36% !important;
   height: 10%;
   border-radius: 46px;
   background-color: #9080ef;
@@ -212,7 +218,7 @@ nav:hover {
   width: 100%;
   padding: 2rem;
 }
-.promo-container{
+.promo-container {
   display: flex;
   flex-direction: row;
 }
@@ -227,25 +233,25 @@ nav:hover {
   flex-direction: row;
   justify-content: space-between;
 }
-.content{
-    padding: 33px 0;
+.content {
+  padding: 33px 0;
 }
-.girl-logo{
- width: 300px;
- height: 200px;
- background-image: url('../public//images/girllogo.png');
- background-repeat:no-repeat;
+.girl-logo {
+  width: 300px;
+  height: 200px;
+  background-image: url("../public//images/girllogo.png");
+  background-repeat: no-repeat;
 }
 .promo_card .content h1,
 .promo_card .content span {
   margin: 10px;
-  font-size: 29px;
+  font-size: 2rem;
 }
-.promo_card .content h1{
-  font-size: 40px;
+.promo_card .content h1 {
+  font-size: 3rem;
 }
 
-.notice-box{
+.notice-box {
   width: 20%;
   color: #fff !important;
   margin: 10px 0px 0px 54px;
@@ -254,10 +260,10 @@ nav:hover {
   background: #5fadb7;
   justify-content: space-between;
 }
-.notice-box h3{
+.notice-box h3 {
   padding: 1px;
 }
-.notice-content{
+.notice-content {
   width: 96%;
   height: 80%;
   background-color: #e7edf6;
@@ -293,7 +299,7 @@ nav:hover {
   0% {
     -moz-transform: translateY(90%);
     -webkit-transform: translateY(90%);
-    transform: translateY(90%)
+    transform: translateY(90%);
   }
   100% {
     -moz-transform: translateY(-90%);
@@ -333,42 +339,176 @@ table td {
   font-size: 13px;
   color: rgb(100, 100, 100);
 }
-.list1{
-    max-height: 70%;
+.list1 {
+  max-height: 70%;
 }
-.list2{
+.list2 {
   margin-left: 30px;
 }
 
 /* Profile page */
 
-.profile-main-block{
-  display:flex;
+.profile-main-block {
+  display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
+  height: 100vh;
 }
-.profile-left-block{
-
+.profile-left-block {
   width: 28%;
-
-  padding: 20px;                                                                            
+  padding: 20px;
+  background-color: #edf2f0;
+  border-radius: 70px;
+  margin: 30px;
 }
- .profile-logo{
+.profile-right-block {
+  width: 70%;
+  padding: 70px;
+  background-color: #edf2f0;
+  border-radius: 70px;
+  margin: 30px;
+}
+.profile-logo {
   width: 60%;
   height: 300px;
   margin: 30px 19%;
   border-radius: 135px;
 }
-.profile-des{
+.profile-des {
   margin: 15px 19%;
-  padding: 20px;  
+  padding: 20px;
 }
-.profile-des h3{
-   font-size: 25px;
+.profile-des h3 {
+  font-size: 25px;
 }
-.profile-des h4{
+.profile-des h4 {
   font-size: 20px;
   font-weight: 500;
   color: #5e5f61;
+}
+.edit-btn-block {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.edit-btn {
+  width: 114px !important;
+}
+.details {
+  width: 100%;
+  padding: 40px;
+  background-color: #9ad0ba;
+  border-radius: 50px;
+  margin: 20px;
+}
+.text-field-details {
+  width: 45% !important;
+  padding: auto !important;
+}
+.first-line,
+.second-line,
+.third-line,
+.forth-line,
+.fifth-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1%;
+}
+.sixth-line {
+  padding: 1%;
+  margin-left: 10%;
+}
+.bio-text-field {
+  width: 90% !important;
+  padding: auto !important;
+
+}
+.role-drop-down {
+  width: 45% !important;
+  padding: auto !important;
+}
+.update-btn-block {
+  width: 90%;
+  /* border: 1px solid black; */
+  padding: 2% 39%;
+  margin-left: 5%;
+}
+.update-btn {
+  width: 200px !important;
+  height: 50px !important;
+}
+.bio-block {
+  margin: 25px 0 !important;
+  font-size: 200px;
+  width: 110%;
+}
+
+/* btn animation */
+
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.6em 2em;
+  border: mediumspringgreen solid 0.15em;
+  border-radius: 0.25em;
+  color: mediumspringgreen;
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+
+}
+
+.button p {
+  z-index: 1;
+}
+
+.button:hover {
+  color: #212121;
+}
+
+.button:active {
+  border-color: teal;
+}
+
+.button::after,
+.button::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: mediumspringgreen;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button:hover:before {
+  transform: translateX(-1em);
+}
+
+.button:hover:after {
+  transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+  background: teal;
 }
